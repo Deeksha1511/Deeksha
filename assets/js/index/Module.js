@@ -1,6 +1,11 @@
 //----------------------------------------------------------------
 //Revealing Module Pattern using IIFE Module Design Pattern//
 //----------------------------------------------------------------
+let PUBLIC_KEY  =   "9ab871748d83ae2eb5527ffd69e034de"
+let hash        =   "d35377547e551cd64a60657d2517bb7f";
+const apiUrl = 'http://gateway.marvel.com/v1/public/'
+const apiKey = `&apikey=${PUBLIC_KEY}&hash=${hash}?ts=1`;
+
 const superHeroApp = (() => {
 	//Variable Declarations//
 	const videos = document.getElementsByClassName("headerVideo");
@@ -66,16 +71,23 @@ const superHeroApp = (() => {
 		} else {
 			//Fetching the Superheroes from the Superhero API
 			try {
-				const url = `https://superhero-hunter-app-mini-server.onrender.com/api/v1/superheroes/${value}`;
-				const response = await fetch(url);
-				let data = await response.json();
-				data = data.data;
+
+				
+				
+				
+				// const url = `https://superhero-hunter-app-mini-server.onrender.com/api/v1/superheroes/${value}`;
+				// const response = await fetch(url);
+				const response = await fetch(apiUrl + `characters?nameStartsWith=${searchInput.value.trim()}` + apiKey);
+    const data = await response.json();
+				console.log(data);
+				//let data = await response.json();
+				//data = data.data;
 				//If the response is Error then hide the suggestion box
-				if (data.response === "error") {
-					UL.style.visibility = "hidden";
-					flag = "not found";
-					return;
-				}
+				// if (data.response === "error") {
+				// 	UL.style.visibility = "hidden";
+				// 	flag = "not found";
+				// 	return;
+				// }
 				const superheroList = data.results;
 				//Remove the previous suggestions
 				suggestionBox.querySelectorAll("li").forEach((li) => {
