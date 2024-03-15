@@ -1,10 +1,16 @@
 //----------------------------------------------------------------
 //Revealing Module Pattern using IIFE Module Design Pattern//
 //----------------------------------------------------------------
-let PUBLIC_KEY  =   "9ab871748d83ae2eb5527ffd69e034de"
-let hash        =   "d35377547e551cd64a60657d2517bb7f";
-const apiUrl = 'http://gateway.marvel.com/v1/public/'
-const apiKey = `&apikey=${PUBLIC_KEY}&hash=${hash}?ts=1`;
+const publicKey = '5a4f5d89062e7fddfcd65cbe479e094c';
+const privateKey = '1a9534d8190d478386adc95d7abdc6960dbf4355';
+const ts = new Date().getTime();
+// const hash = md5(ts + privateKey + publicKey);
+
+
+// let PUBLIC_KEY  =   "9ab871748d83ae2eb5527ffd69e034de"
+// let hash        =   "d35377547e551cd64a60657d2517bb7f";
+// const apiUrl = 'http://gateway.marvel.com/v1/public/'
+// const apiKey = `&apikey=${PUBLIC_KEY}&hash=${hash}?ts=1`;
 
 const superHeroApp = (() => {
 	//Variable Declarations//
