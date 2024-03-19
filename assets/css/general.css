@@ -27,7 +27,8 @@ html {
 /* -----------------------------CSS Variables----------------------------- */
 :root {
 	--color-primary: #000000;
-	--color-secondary: #ff0000;
+	--color-secondary: #891652;
+	//--color-secondary: #ff0000;
 	--color-tertiary: #950101;
 	--color-quaternary: #fff;
 	--font-poppins: "Poppins", sans-serif;
