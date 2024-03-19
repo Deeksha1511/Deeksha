@@ -13,7 +13,7 @@ let hash="19c9286ef0a1cc00e72015aa2404d6f5";
 // let PUBLIC_KEY  =   "9ab871748d83ae2eb5527ffd69e034de"
 // let hash        =   "d35377547e551cd64a60657d2517bb7f";
 const apiUrl = 'http://gateway.marvel.com/v1/public/'
-const apiKey = `&apikey=${PUBLIC_KEY}&hash=${hash}?ts=1`;
+const apiKey = `&apikey=${publicKey}&hash=${hash}?ts=1`;
 
 const superHeroApp = (() => {
 	//Variable Declarations//
