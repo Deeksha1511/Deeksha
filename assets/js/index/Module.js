@@ -62,6 +62,7 @@ const superHeroApp = (() => {
 		//Superhero Hunter App API Initialization
 		(async function initialize() {
 			try {
+				// const url="https://www.superheroapi.com/api.php/891370368026086"
 				const url = "https://gateway.marvel.com/v1/public/characters/a?apikey=5a4f5d89062e7fddfcd65cbe479e094c";
 
 				//const url = "https://superhero-hunter-app-mini-server.onrender.com";
